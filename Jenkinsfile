@@ -5,7 +5,7 @@ pipeline {
             maven 'Maven3'
     }
     environment {
-            REPO_URL = 'https://github.com/MINAWI0/GestionBibliotheque.git'
+            REPO_URL = 'https://github.com/ibtissammanadir/GestionBibliotheque.git'
             SONARQUBE_CREDENTIALS_ID = 'sonar'
     }
     stages {
@@ -47,14 +47,14 @@ pipeline {
      post {
             success {
                 mail(
-                    to: 'minaouimh@gmail.com',
+                    to: 'ibtissammanadir4@gmail.com',
                     subject: 'Build Success',
                     body: 'Le build a été complété avec succès.'
                 )
             }
             failure {
                 mail(
-                    to: 'minaouimh@gmail.com',
+                    to: 'ibtissammanadir4@gmail.com',
                     subject: 'Build Failed',
                     body: 'Le build a échoué.'
                 )
